@@ -75,10 +75,10 @@ class _AppNavigationScreenState extends State<AppNavigationScreen> {
           if (!_isLoggedIn || _overlayOpacity > 0)
             AnimatedOpacity(
               opacity: _overlayOpacity,
-              duration: const Duration(milliseconds: 600),
+              duration: const Duration(milliseconds: 1000),
               curve: Curves.easeInOut,
               child: TweenAnimationBuilder<double>(
-                duration: const Duration(milliseconds: 600),
+                duration: const Duration(milliseconds: 1000),
                 tween: Tween<double>(begin: 0, end: _blurSigma),
                 builder: (context, blurValue, child) {
                   return BackdropFilter(
